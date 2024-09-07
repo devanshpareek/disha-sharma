@@ -12,6 +12,9 @@ import WaveCarousel from "./components/WaveCarousel/WaveCarousel";
 import { useEffect, useRef, useState } from "react";
 import WorldIAmSurroundedWith from "./components/WorldIAmSurroundedWith";
 import ComplexWavyLineWithNodes from "./components/curvedLine";
+import JewlsByAs from "./components/JewlsByAS/JewlsByAs";
+import TbhStore from "./components/TbhStore/TbhStore";
+import Sukoon from "./components/Sukoon/Sukoon";
 
 function App() {
   const elementRef = useRef(null);
@@ -49,6 +52,34 @@ function App() {
                 {/* <Contact /> */}
                 <Footer />
                 {/* <ComplexWavyLineWithNodes /> */}
+              </>
+            ),
+          },
+          {
+            path: "/my-work/jewls-by-as",
+            element: (
+              <>
+                <JewlsByAs />
+                <Footer />
+              </>
+            ),
+          },
+          {
+            path: "/my-work/tbh-store",
+            element: (
+              <>
+                <TbhStore/>
+                <Footer />
+              </>
+            ),
+          },
+          
+          {
+            path: "/my-work/sukoon",
+            element: (
+              <>
+                <Sukoon/>
+                <Footer />
               </>
             ),
           },

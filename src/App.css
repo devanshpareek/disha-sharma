@@ -102,12 +102,26 @@ nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
 }
+
+.scrolled--work {
+  background-color: whitesmoke !important;
+  color: black !important;
+
+  a {
+    color: #000 !important;
+  }
+
+  .social-icon a {
+    background: lightgray;
+  }
+}
+
 nav.navbar a.navbar-brand {
     width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff !important;
+  color: #fff;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -146,7 +160,7 @@ span.navbar-text {
     background-color: #ffffff;
     border-radius: 50%;
     transform: scale(0);
-	transition: 0.3s ease-in-out;
+	  transition: 0.3s ease-in-out;
 }
 .social-icon a:hover::before {
     transform: scale(1);
@@ -771,10 +785,10 @@ h2 {
 }
 
 .hand-wave {
-  height: 100px;
-  width: 150px;
+  height: 40px;
+  width: 60px;
   display: flex;
-  background: url('./assets/Videos/hand-wave.mp4');
+  background: url('./assets/Videos/contact-me.gif');
 }
 
 .my-world-wrapper {
@@ -834,11 +848,16 @@ h2 {
   font-size: 3vh;
   justify-content: center;
   align-items: center;
+  height: 90%;
 }
 
 .my-world-wrapper--cover-page {
   display: flex;
   flex-direction: column;
+  background-image: url('./assets/img/World.png');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
   
   .my-world-text {
     font-size: 25vh !important;

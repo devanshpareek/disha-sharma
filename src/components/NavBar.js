@@ -4,13 +4,20 @@ import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
-import handWaveVdo from "../assets/Videos/hand-wave.gif";
+import handWaveVdo from "../assets/Videos/contact-me.gif";
 import { HashLink } from "react-router-hash-link";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [isWorkPage, setIsWorkPage] = useState(
+    window.location.pathname.includes("my-work")
+  );
+
+  useEffect(() => {
+    setIsWorkPage(window.location.pathname.includes("my-work"));
+  }, [window.location.pathname]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -19,7 +26,7 @@ export const NavBar = () => {
       } else {
         setScrolled(false);
       }
-      console.log(window.scrollY)
+      console.log(window.scrollY);
     };
 
     window.addEventListener("scroll", onScroll);
@@ -33,7 +40,12 @@ export const NavBar = () => {
 
   return (
     <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+      <Navbar
+        expand="md"
+        className={
+          isWorkPage ? "scrolled scrolled--work" : scrolled ? "scrolled" : ""
+        }
+      >
         <Container>
           <Navbar.Collapse
             id="basic-navbar-nav"
@@ -67,7 +79,9 @@ export const NavBar = () => {
               <Nav.Link
                 href="#myWorld"
                 className={
-                  activeLink === "myWorld" ? "active navbar-link" : "navbar-link"
+                  activeLink === "myWorld"
+                    ? "active navbar-link"
+                    : "navbar-link"
                 }
                 onClick={() => onUpdateActiveLink("myWorld")}
               >

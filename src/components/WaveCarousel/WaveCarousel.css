@@ -67,6 +67,7 @@
 .slide-image {
   height: 200px;
   width: 200px;
+  object-fit: contain;
   border-radius: 20%;
   /* border-radius: 50%; */
 }

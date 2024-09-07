@@ -63,7 +63,7 @@ const WorldIAmSurroundedWith = () => {
             <div>
               {index === 0 ? (
                 <div className="my-world-wrapper my-world-wrapper--cover-page">
-                  <div className="my-world-text">{slidesText[index]}</div>
+                  <div className="my-world-text"></div>
                   <div className="scrolldown-img">
                     <img src={scrollDown} />
                   </div>

@@ -2,146 +2,18 @@ import React, { useEffect, useState } from "react";
 import "./WaveCarousel.css";
 import Carousel from "react-multi-carousel";
 import img from "../../assets/img/project-img1.png";
-import cameraImg from "../../assets/img/camera-img.jpg";
+import JewlsByAsLogo from "../../assets/work/JewlsByAs/JBASLogo.png";
+import SukoonLogo from "../../assets/work/Sukoon/Logo.png";
+import TbhLogo from "../../assets/work/TbhStore/Logo.png";
 import socialMediaImg from "../../assets/img/social-media-img.jpg";
-import designingImg from "../../assets/img/designing-img.jpg";
 import { Wordcloud } from "../WordCloud";
 import useScreenSize from "../../Hooks/getScreenSize";
 import useInView from "../../Hooks/useInView";
 
 const slides = [
-  { image: cameraImg, text: "Photography", link: "/page1" },
-  { image: socialMediaImg, text: "Social Media", link: "/page2" },
-  { image: designingImg, text: "Design", link: "/page3" },
-];
-
-const words = [
-  {
-    text: "Film",
-    value: 1,
-    urlValue: "film",
-    color: "gray",
-  },
-  {
-    text: "Photography",
-    value: 1,
-    urlValue: "photography",
-    color: "black",
-  },
-  {
-    text: "Designing",
-    value: 1,
-    urlValue: "designing",
-    color: "gray",
-  },
-  {
-    text: "Packaging",
-    value: 1,
-    urlValue: "packaging",
-    color: "gray",
-  },
-  {
-    text: "Filmmaking",
-    value: 1,
-    urlValue: "filmmaking",
-    color: "black",
-  },
-  {
-    text: "Branding",
-    value: 1,
-    urlValue: "branding",
-    color: "black",
-  },
-  {
-    text: "Colour-Psychology",
-    value: 1,
-    urlValue: "colour_psychology",
-    color: "black",
-  },
-  {
-    text: "Play",
-    value: 1,
-    urlValue: "play",
-    color: "gray",
-  },
-  {
-    text: "Social media",
-    value: 1,
-    urlValue: "social_media",
-    color: "black",
-  },
-  {
-    text: "Doodle",
-    value: 1,
-    urlValue: "doodle",
-    color: "gray",
-  },
-  {
-    text: "Art & Artist",
-    value: 1,
-    urlValue: "art_artist",
-    color: "black",
-  },
-  {
-    text: "Sketch",
-    value: 1,
-    urlValue: "sketch",
-    color: "black",
-  },
-  {
-    text: "Paint",
-    value: 1,
-    urlValue: "paint",
-    color: "gray",
-  },
-  {
-    text: "Reels",
-    value: 1,
-    urlValue: "reels",
-    color: "gray",
-  },
-  {
-    text: "Video Editing",
-    value: 1,
-    urlValue: "video_editing",
-    color: "gray",
-  },
-  {
-    text: "Story writing",
-    value: 1,
-    urlValue: "story_writing",
-    color: "black",
-  },
-  {
-    text: "Copywriting",
-    value: 1,
-    urlValue: "copywriting",
-    color: "gray",
-  },
-  {
-    text: "Content creation",
-    value: 1,
-    urlValue: "content_creation",
-    color: "black",
-  },
-  {
-    text: "Art History",
-    value: 1,
-    urlValue: "art_history",
-    color: "gray",
-  },
-  {
-    text: "Advertising",
-    value: 1,
-    urlValue: "advertising",
-    color: "gray",
-  },
-  {
-    text: "Commercial Arts",
-    value: 1,
-    urlValue: "commercial_arts",
-    color: "gray",
-  },
+  { image: JewlsByAsLogo, text: "Jewls by AS", link: "/my-work/jewls-by-as" },
+  { image: SukoonLogo, text: "Sukoon", link: "/my-work/sukoon" },
+  { image: TbhLogo, text: "TBH Store", link: "/my-work/tbh-store" },
 ];
 
 const WaveCarousel = () => {
@@ -201,7 +73,7 @@ const WaveCarousel = () => {
               <div className="col-12">
                 {/* <div className="wave-line"></div> */}
 
-                <div  className="skill-bx wow zoomIn animated-container">
+                <div className="skill-bx wow zoomIn animated-container">
                   <Carousel
                     responsive={responsive}
                     infinite={true}

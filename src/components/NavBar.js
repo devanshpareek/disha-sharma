@@ -59,7 +59,7 @@ export const NavBar = () => {
               }}
             >
               <Nav.Link
-                href="#home"
+                href={isWorkPage ? "/" : "#home"}
                 className={
                   activeLink === "home" ? "active navbar-link" : "navbar-link"
                 }
@@ -68,7 +68,7 @@ export const NavBar = () => {
                 Home
               </Nav.Link>
               <Nav.Link
-                href="#skills"
+                href={isWorkPage ? "/" : "#skills"}
                 className={
                   activeLink === "skills" ? "active navbar-link" : "navbar-link"
                 }
@@ -77,7 +77,7 @@ export const NavBar = () => {
                 About Me
               </Nav.Link>
               <Nav.Link
-                href="#myWorld"
+                href={isWorkPage ? "/" : "#myWorld"}
                 className={
                   activeLink === "myWorld"
                     ? "active navbar-link"
@@ -88,7 +88,7 @@ export const NavBar = () => {
                 My World
               </Nav.Link>
               <Nav.Link
-                href="#my-work"
+                href={isWorkPage ? "/" : "#my-work"}
                 className={
                   activeLink === "my-work"
                     ? "active navbar-link"
@@ -99,7 +99,7 @@ export const NavBar = () => {
                 My Work
               </Nav.Link>
               <Nav.Link
-                href="#projects"
+                href={isWorkPage ? "/" : "#projects"}
                 className={
                   activeLink === "projects"
                     ? "active navbar-link"

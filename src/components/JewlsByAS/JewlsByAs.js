@@ -11,6 +11,11 @@ import SocialMedia2 from "../../assets/work/JewlsByAs/SocialMedia/Img2.jpg";
 import SocialMedia3 from "../../assets/work/JewlsByAs/SocialMedia/Img3.jpg";
 import SocialMedia4 from "../../assets/work/JewlsByAs/SocialMedia/Img4.jpg";
 import WordCloud from "../../assets/work/JewlsByAs/word-cloud.png";
+import Video1 from "./reel1.mp4";
+import Video2 from "./reel2.mp4";
+import Video3 from "./reel3.mp4";
+import Video4 from "./reel4.mp4";
+import ReelsContainer from "../ReelsContainer/ReelsContainer";
 
 const JewlsByAs = () => {
   const colors = [
@@ -20,38 +25,11 @@ const JewlsByAs = () => {
     { name: "Yellow", hex: "#A47551" },
     { name: "Purple", hex: "#602304" },
   ];
+
+  const reels = [Video2, Video1, Video3, Video4];
+
   return (
     <div className="work-page-wrapper">
-      <div className="brand-description">
-        <div className="brand-logo">
-          <img className="logo" src={Logo}></img>
-        </div>
-        <div className="line"></div>
-        <div className="brand-text">
-          The standard chunk of Lorem Ipsum used since the 1500s is reproduced
-          below for those interested. Sections 1.10.32 and 1.10.33 from "de
-          Finibus Bonorum et Malorum" by Cicero are also reproduced in their
-          exact original form, accompanied by English versions from the 1914
-          translation by H. Rackham.
-        </div>
-      </div>
-      <div className="color-pallet-container">
-        <div className="image-container">
-          <img src={WordCloud} alt="Your Image" />
-        </div>
-
-        <div className="color-pallet">
-          {colors.map((color, index) => (
-            <div className="color-item" key={index}>
-              <div
-                className="color-rectangle"
-                style={{ backgroundColor: color.hex }}
-              ></div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="photography">
         <div className="cover-photo">
           <img src={CoverImg}></img>
@@ -83,6 +61,7 @@ const JewlsByAs = () => {
         <img src={SocialMedia3} alt="Image 3" class="social-media-image" />
         <img src={SocialMedia4} alt="Image 4" class="social-media-image" />
       </div>
+      <ReelsContainer reels={reels} />
     </div>
   );
 };

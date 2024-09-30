@@ -4,7 +4,7 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import profileImage from "../assets/img/camera-img.jpg";
+import profileImage from "../assets/img/DishaImage.jpg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { Wordcloud } from "./WordCloud";
@@ -96,7 +96,7 @@ export const MoonCloud = () => {
       <Container
         style={{
           display: "flex",
-          justifyContent:'center'
+          justifyContent: "center",
         }}
       >
         <Row>
@@ -106,16 +106,15 @@ export const MoonCloud = () => {
                 <img className="profile-image" src={profileImage}></img>
               </div>
               <div className="profile-content">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                I'm a digital storyteller who turns ideas into compelling
+                content. With a passion for creativity and a knack for
+                understanding people and life, I transform brands into stories
+                that resonate. My focus is on building authentic connections
+                with your target audience. I've had the pleasure of working with
+                diverse clients across various industries, from home decor and
+                accessories to wellness and lifestyle. Ready to bring your
+                brand's story to life? Let's chat! Explore my portfolio to see
+                my work in action.
               </div>
             </div>
           </Col>

@@ -7,6 +7,7 @@ import navIcon3 from "../assets/img/nav-icon3.svg";
 import handWaveVdo from "../assets/Videos/contact-me.gif";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
+import temp from "../assets/img/reachout.gif"
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -125,7 +126,7 @@ export const NavBar = () => {
             </span>
           </Navbar.Collapse>
           <div>
-            <img className="hand-wave" src={handWaveVdo}></img>
+            <img className="hand-wave" src={temp}></img>
           </div>
         </Container>
       </Navbar>

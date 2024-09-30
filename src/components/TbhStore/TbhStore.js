@@ -22,19 +22,6 @@ const TbhStore = () => {
   ];
   return (
     <div className="tbh-work-page-wrapper">
-      <div className="brand-description">
-        <div className="brand-logo">
-          <img src={Logo}></img>
-        </div>
-        <div className="line"></div>
-        <div className="brand-text">
-          The standard chunk of Lorem Ipsum used since the 1500s is reproduced
-          below for those interested. Sections 1.10.32 and 1.10.33 from "de
-          Finibus Bonorum et Malorum" by Cicero are also reproduced in their
-          exact original form, accompanied by English versions from the 1914
-          translation by H. Rackham.
-        </div>
-      </div>
       {/* <div className="color-pallet-container">
         <div className="image-container">
           <img src={WordCloud} alt="Your Image" />

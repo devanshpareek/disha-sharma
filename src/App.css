@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 /************ Custom Font ************/
 @font-face {
 	font-family: Centra;
@@ -33,7 +34,7 @@ body {
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
-  font-family:'quicksandregular' !important;
+  font-family: 'Quicksand';
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -387,6 +388,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .profile-content {
@@ -547,7 +549,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   content: "";
   /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
   background: linear-gradient(90.21deg, white -5.91%, gray 111.58%);
-  background-image: url('./assets/img/art-illustration.jpg');
+  /* background-image: url('./assets/img/art-illustration.jpg'); */
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -604,7 +606,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 #projects {
-  background-image: url('./assets/img/art-illustration.jpg');
+  /* background-image: url('./assets/img/art-illustration.jpg'); */
 
   h2 {
     color: #000;
@@ -785,8 +787,8 @@ h2 {
 }
 
 .hand-wave {
-  height: 40px;
-  width: 60px;
+  height: 80px;
+  width: 100px;
   display: flex;
   background: url('./assets/Videos/contact-me.gif');
 }
@@ -945,4 +947,11 @@ body::-webkit-scrollbar {
     height: 33.33vh; /* 1/3 of the viewport height */
     background: black;
     transition: clip-path 0.3s; /* Smooth transition */
+}
+
+
+.wave-carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

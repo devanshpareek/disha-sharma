@@ -6,7 +6,7 @@ import { Banner } from "./components/Banner";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
+import Footer  from "./components/Footer";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import WaveCarousel from "./components/WaveCarousel/WaveCarousel";
 import { useEffect, useRef, useState } from "react";
@@ -15,6 +15,9 @@ import ComplexWavyLineWithNodes from "./components/curvedLine";
 import JewlsByAs from "./components/JewlsByAS/JewlsByAs";
 import TbhStore from "./components/TbhStore/TbhStore";
 import Sukoon from "./components/Sukoon/Sukoon";
+import BrandDescription from "./components/BrandDescription/BrandDescription";
+import WordCloudContainer from "./components/WordCloudContainer/WordCloudContainer";
+import Melange from "./components/Milange/Milange";
 
 function App() {
   const elementRef = useRef(null);
@@ -50,7 +53,7 @@ function App() {
                 <Projects />
 
                 {/* <Contact /> */}
-                <Footer />
+                {/* <Footer /> */}
                 {/* <ComplexWavyLineWithNodes /> */}
               </>
             ),
@@ -59,8 +62,10 @@ function App() {
             path: "/my-work/jewls-by-as",
             element: (
               <>
+                <BrandDescription brandName={"JewlsByAs"} />
+                <WordCloudContainer brandName={"JewlsByAs"} />
                 <JewlsByAs />
-                <Footer />
+                {/* <Footer /> */}
               </>
             ),
           },
@@ -68,18 +73,32 @@ function App() {
             path: "/my-work/tbh-store",
             element: (
               <>
-                <TbhStore/>
-                <Footer />
+                <BrandDescription brandName={"TbhStore"} />
+                <TbhStore />
+                {/* <Footer /> */}
               </>
             ),
           },
-          
+
           {
             path: "/my-work/sukoon",
             element: (
               <>
-                <Sukoon/>
-                <Footer />
+                <BrandDescription brandName={"Sukoon"} />
+                <WordCloudContainer brandName={"Sukoon"} />
+                <Sukoon />
+                {/* <Footer /> */}
+              </>
+            ),
+          },
+          {
+            path: "/my-work/melange",
+            element: (
+              <>
+                <BrandDescription brandName={"Melange"} />
+                <WordCloudContainer brandName={"Melange"} />
+                <Melange />
+                {/* <Footer /> */}
               </>
             ),
           },

@@ -1,0 +1,31 @@
+.sukoon-social-media-carousel-container {
+    width: 100vw; /* Full width of the viewport */
+    overflow: hidden; /* Hide overflow */
+    margin-bottom: 3rem;
+  }
+  
+  .sukoon-social-media-carousel-images {
+    display: flex;
+    width: 100%;
+  }
+  
+  .sukoon-social-media-carousel-image {
+    flex: 1 1 auto; /* Make images flexible to take up available space */
+    width: 100%;
+    max-width: 100%; 
+    object-fit: cover; 
+    height: 100%; /* Adjust height based on your preference */
+  }
+  
+  /* Optional: Add a max height for the carousel images */
+  .sukoon-social-media-carousel-container {
+    height: 400px; /* Set a fixed height for the container, you can adjust this */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .sukoon-social-media-carousel-container {
+      height: 300px; /* Adjust height for smaller screens */
+    }
+  }
+  

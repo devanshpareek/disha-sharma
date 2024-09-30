@@ -1,0 +1,45 @@
+/* Full page container */
+.color-pallet-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: white; /* Optional background color */
+  }
+  
+  /* Image container */
+  .image-container {
+    flex: 0 0 70%; /* 70% of the width */
+    text-align: center;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Color pallet container */
+  .color-pallet {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 0 0 30%; /* 30% of the width */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Spacing between colors */
+  }
+  
+  /* Individual color items */
+  .color-item {
+    width: 12vw; /* Set the size of each color square */
+    height: 50px;
+  }
+  
+  .color-rectangle {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px; /* Rounded corners for the color rectangle */
+  }
+  

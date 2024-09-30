@@ -5,14 +5,16 @@ import img from "../../assets/img/project-img1.png";
 import JewlsByAsLogo from "../../assets/work/JewlsByAs/JBASLogo.png";
 import SukoonLogo from "../../assets/work/Sukoon/Logo.png";
 import TbhLogo from "../../assets/work/TbhStore/Logo.png";
+import MelangeLogo from "../../assets/work/Melange/MelangeLogo.jpg";
 import socialMediaImg from "../../assets/img/social-media-img.jpg";
 import { Wordcloud } from "../WordCloud";
 import useScreenSize from "../../Hooks/getScreenSize";
 import useInView from "../../Hooks/useInView";
 
 const slides = [
-  { image: JewlsByAsLogo, text: "Jewls by AS", link: "/my-work/jewls-by-as" },
   { image: SukoonLogo, text: "Sukoon", link: "/my-work/sukoon" },
+  { image: JewlsByAsLogo, text: "Jewls by AS", link: "/my-work/jewls-by-as" },
+  { image: MelangeLogo, text: "Melange", link: "/my-work/melange" },
   { image: TbhLogo, text: "TBH Store", link: "/my-work/tbh-store" },
 ];
 
@@ -55,10 +57,8 @@ const WaveCarousel = () => {
   console.log(isInView);
   return (
     <section ref={setRef} className="skill smooth-scroll-section" id="my-work">
-      {/* <Wordcloud words={words} size={[screenWidth, screenHeight * 0.4]} /> */}
       {(isInView || onceInView) && (
         <div>
-          {" "}
           <div
             className="animated-container"
             style={{
@@ -66,14 +66,22 @@ const WaveCarousel = () => {
               marginBottom: "2rem",
             }}
           >
-            <h2>A peek at my work</h2>
+            <h2
+              style={{
+                fontFamily: "Quicksand",
+                color: "#25537b",
+                fontWeight: "700",
+              }}
+            >
+              A peek at my work
+            </h2>
           </div>
           <div className="container wave-line">
             <div className="row">
               <div className="col-12">
                 {/* <div className="wave-line"></div> */}
 
-                <div className="skill-bx wow zoomIn animated-container">
+                <div className="skill-bx wow zoomIn animated-container wave-carousel-wrapper">
                   <Carousel
                     responsive={responsive}
                     infinite={true}
@@ -97,28 +105,24 @@ const WaveCarousel = () => {
                 </div>
               </div>
             </div>
+            <div
+              style={{
+                height: "30%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "flex-end",
+                fontFamily: "Goudy Old Style",
+                fontSize: "1.65rem",
+                fontWeight: "700",
+                color: "#25537b",
+              }}
+            >
+              All good things come in waves!
+            </div>
           </div>
         </div>
       )}
-
-      {/* <img className="background-image-left" src={colorSharp} alt="Image" /> */}
     </section>
-
-    // <div className="carousel-container">
-    //   <div className="wave-line"></div>
-    //   <div className="slide-container">
-    //     {slides.map((slide, index) => (
-    //       <div
-    //         key={index}
-    //         className="slide"
-    //         onClick={() => handleSlideClick(slide.link)}
-    //       >
-    //         <img src={slide.image} alt={slide.text} className="slide-image" />
-    //         <div className="slide-text">{slide.text}</div>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
   );
 };
 

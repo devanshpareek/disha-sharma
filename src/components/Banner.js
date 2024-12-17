@@ -51,15 +51,6 @@ export const Banner = () => {
 
   return (
     <section className="banner smooth-scroll-section" id="home">
-      {/* <Container>
-        <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container> */}
-
       <video autoPlay loop muted className="bg-vdo">
         <source src={vdo} type="video/mp4"></source>
       </video>

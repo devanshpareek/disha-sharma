@@ -9,6 +9,10 @@ import LeftImg21 from "../../assets/work/TbhStore/Img5.png";
 import LeftImg22 from "../../assets/work/TbhStore/Img6.png";
 import RightImg21 from "../../assets/work/TbhStore/Img7.png";
 import RightImg22 from "../../assets/work/TbhStore/Img8.png";
+import LeftImg31 from "../../assets/work/TbhStore/Img10.jpg";
+import RightImg31 from "../../assets/work/TbhStore/Img11.jpg";
+import RightImg41 from "../../assets/work/TbhStore/Img12.jpg";
+import LeftImg41 from "../../assets/work/TbhStore/Img13.jpg";
 import LastPhotograph from "../../assets/work/TbhStore/Img9.png";
 import WordCloud from "../../assets/work/Sukoon/word-cloud.png";
 
@@ -22,12 +26,6 @@ const TbhStore = () => {
   ];
   return (
     <div className="tbh-work-page-wrapper">
-      {/* <div className="color-pallet-container">
-        <div className="image-container">
-          <img src={WordCloud} alt="Your Image" />
-        </div>
-      </div> */}
-
       <div className="photography">
         <div className="cover-photo">
           <img src={CoverImg}></img>
@@ -47,6 +45,24 @@ const TbhStore = () => {
           </div>
           <div className="image-right">
             <img src={LeftImg22} alt="Right Image" className="image" />
+          </div>
+        </div>
+
+        <div className="tbh-image-container">
+          <div className="image-left">
+            <img src={LeftImg31} alt="Left Image" className="image" />
+          </div>
+          <div className="image-right">
+            <img src={RightImg31} alt="Right Image" className="image" />
+          </div>
+        </div>
+
+        <div className="tbh-image-container">
+          <div className="image-left">
+            <img src={LeftImg41} alt="Left Image" className="image" />
+          </div>
+          <div className="image-right">
+            <img src={RightImg41} alt="Right Image" className="image" />
           </div>
         </div>
 

@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./WaveCarousel.css";
 import Carousel from "react-multi-carousel";
-import img from "../../assets/img/project-img1.png";
 import JewlsByAsLogo from "../../assets/work/JewlsByAs/JBASLogo.png";
 import SukoonLogo from "../../assets/work/Sukoon/Logo.png";
 import TbhLogo from "../../assets/work/TbhStore/Logo.png";
 import MelangeLogo from "../../assets/work/Melange/MelangeLogo.jpg";
-import socialMediaImg from "../../assets/img/social-media-img.jpg";
-import { Wordcloud } from "../WordCloud";
 import useScreenSize from "../../Hooks/getScreenSize";
 import useInView from "../../Hooks/useInView";
 
 const slides = [
   { image: SukoonLogo, text: "Sukoon", link: "/my-work/sukoon" },
-  { image: JewlsByAsLogo, text: "Jewls by AS", link: "/my-work/jewls-by-as" },
+  { image: JewlsByAsLogo, text: "Jewels by AS", link: "/my-work/jewls-by-as" },
   { image: MelangeLogo, text: "Melange", link: "/my-work/melange" },
   { image: TbhLogo, text: "TBH Store", link: "/my-work/tbh-store" },
 ];

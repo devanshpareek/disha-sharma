@@ -6,7 +6,7 @@ import { Banner } from "./components/Banner";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import { Contact } from "./components/Contact";
-import Footer  from "./components/Footer";
+import Footer from "./components/Footer";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import WaveCarousel from "./components/WaveCarousel/WaveCarousel";
 import { useEffect, useRef, useState } from "react";
@@ -18,6 +18,17 @@ import Sukoon from "./components/Sukoon/Sukoon";
 import BrandDescription from "./components/BrandDescription/BrandDescription";
 import WordCloudContainer from "./components/WordCloudContainer/WordCloudContainer";
 import Melange from "./components/Milange/Milange";
+import Photography from "./components/Skills/Photography";
+import Jewllery from "./components/Skills/Photography/Jewllery";
+import Ceremics from "./components/Skills/Photography/Ceremics";
+import Candles from "./components/Skills/Photography/Candles";
+import InteriorDesign from "./components/Skills/Photography/InteriorDesign";
+import Lifestyle from "./components/Skills/Photography/Lifestyle";
+import TshirtPrinting from "./components/Skills/Photography/TshirtPrinting";
+import AboutUs from "./components/AboutUs/AboutUs";
+import Reels from "./components/ReelsSkills/Reels";
+import SocialMedia from "./components/ReelsSkills/SocialMedia";
+import BrandStore from "./components/Skills/BrandStore/BrandStore";
 
 function App() {
   const elementRef = useRef(null);
@@ -47,7 +58,7 @@ function App() {
             element: (
               <>
                 <Banner />
-                <Skills />
+                {/* <Skills /> */}
                 <WorldIAmSurroundedWith />
                 <WaveCarousel />
                 <Projects />
@@ -99,6 +110,78 @@ function App() {
                 <WordCloudContainer brandName={"Melange"} />
                 <Melange />
                 {/* <Footer /> */}
+              </>
+            ),
+          },
+          {
+            path: "/skills/photography",
+            element: (
+              <>
+                <Photography />
+              </>
+            ),
+          },
+          {
+            path: "/skills/photography/jewllery",
+            element: (
+              <>
+                <Jewllery />
+              </>
+            ),
+          },
+          {
+            path: "/skills/photography/ceremics",
+            element: (
+              <>
+                <Ceremics />
+              </>
+            ),
+          },
+          {
+            path: "/skills/photography/candles",
+            element: (
+              <>
+                <Candles />
+              </>
+            ),
+          },
+          {
+            path: "/skills/photography/lifestyle",
+            element: (
+              <>
+                <Lifestyle />
+              </>
+            ),
+          },
+          {
+            path: "/skills/social-media",
+            element: (
+              <>
+                <SocialMedia />
+              </>
+            ),
+          },
+          {
+            path: "/skills/brand-store",
+            element: (
+              <>
+                <BrandStore />
+              </>
+            ),
+          },
+          {
+            path: "/skills/tshirt-designing",
+            element: (
+              <>
+                <TshirtPrinting />
+              </>
+            ),
+          },
+          {
+            path: "/about-us",
+            element: (
+              <>
+                <AboutUs />
               </>
             ),
           },

@@ -1,13 +1,13 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import photographyImg from "../assets/img/photographyImg.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import useInView from "../Hooks/useInView";
 import { useEffect, useState } from "react";
+import TshirtDesigningPic from "../assets/work/Wolf-Fx/5-2.jpg"
+import PhotographyImg from "../assets/work/JewlsByAs/img1.jpg"
 
 const Projects = () => {
   const [setRef, isInView] = useInView({
@@ -15,34 +15,35 @@ const Projects = () => {
   });
   const projects = [
     {
-      title: "Business Startup",
+      title: "Photography",
+      description:
+        "A picture is a secret about a secret, the more it tells you the less you know.",
+      imgUrl: PhotographyImg,
+    },
+    {
+      title: "Tshirt Designing",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: TshirtDesigningPic,
+    },
+    {
+      title: "Social Media",
+      description: "Design & Development",
+      imgUrl: photographyImg,
+    },
+    {
+      title: "Brand Store",
+      description: "Design & Development",
+      imgUrl: photographyImg,
     },
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg2,
+      imgUrl: photographyImg,
     },
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      imgUrl: photographyImg,
     },
   ];
 
@@ -56,7 +57,11 @@ const Projects = () => {
   });
   console.log(isInView);
   return (
-    <section ref={setRef} className="project smooth-scroll-section" id="projects">
+    <section
+      ref={setRef}
+      className="project smooth-scroll-section"
+      id="projects"
+    >
       {(isInView || onceInView) && (
         <Container className="animated-container">
           <Row>
@@ -68,8 +73,8 @@ const Projects = () => {
                       isVisible ? "animate__animated animate__fadeIn" : ""
                     }
                   >
-                    <h2>बातें</h2>
-                    <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                    <h2>Skills</h2>
+                    {/* <Tab.Container id="projects-tabs" defaultActiveKey="first">
                       <Nav
                         variant="pills"
                         className="nav-pills mb-5 justify-content-center align-items-center"
@@ -100,7 +105,7 @@ const Projects = () => {
                             })}
                           </Row>
                         </Tab.Pane>
-                        <Tab.Pane eventKey="section">
+                        <Tab.Pane eventKey="second">
                           <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Cumque quam, quod neque provident velit, rem
@@ -119,7 +124,12 @@ const Projects = () => {
                           </p>
                         </Tab.Pane>
                       </Tab.Content>
-                    </Tab.Container>
+                    </Tab.Container> */}
+                    <Row className="skillsContainer">
+                      {projects.map((project, index) => {
+                        return <ProjectCard key={index} {...project} />;
+                      })}
+                    </Row>
                   </div>
                 )}
               </TrackVisibility>

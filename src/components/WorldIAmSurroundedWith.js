@@ -11,7 +11,12 @@ import { MoonCloud } from "./MoodCloud";
 import useInView from "../Hooks/useInView";
 import { useEffect, useRef, useState } from "react";
 
+export function isMobileDevice() {
+  return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
 const WorldIAmSurroundedWith = () => {
+  const isMobile = isMobileDevice();
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -78,7 +83,9 @@ const WorldIAmSurroundedWith = () => {
                     </div>
                     <div className="my-world-text">{slidesText[index]}</div>
                   </div>
-                  <div className="cat-pow">
+                  <div
+                    className={isMobile ? "cat-pow cat-pow--mobile" : "cat-pow"}
+                  >
                     <div>
                       <div className="cat-pow-image">
                         <img src={catPowImg}></img>
@@ -93,7 +100,12 @@ const WorldIAmSurroundedWith = () => {
                 <div>
                   <div
                     className={
-                      "my-world-wrapper" + " my-world-wrapper--" + index
+                      isMobile
+                        ? "my-world-wrapper-mobile" +
+                          " my-world-wrapper" +
+                          " my-world-wrapper--" +
+                          index
+                        : "my-world-wrapper" + " my-world-wrapper--" + index
                     }
                   >
                     <div>

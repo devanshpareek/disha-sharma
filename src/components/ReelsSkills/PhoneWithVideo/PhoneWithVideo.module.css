@@ -1,0 +1,36 @@
+.phone {
+  width: 120px;
+  height: 250px;
+  border: 4px solid #000;
+  border-radius: 20px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin-top: -80px;
+}
+
+.screen {
+  width: 95%; 
+  height: 85%;
+  border-radius: 20px;
+  position: relative; /* Allow absolute positioning of the image */
+  overflow: visible; /* Keeps the screen effect */
+}
+
+.image {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  position: absolute; /* Allows smooth transition */
+  left: 0;
+  top: 20px;
+  transition: transform 0.5s ease; /* Smooth sliding effect */
+}
+
+.shift {
+  transform: translateX(50px); 
+}
+  

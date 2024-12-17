@@ -1,0 +1,53 @@
+.SocialMediaMiddleRow {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 8rem;
+}
+.SocialMediaMiddleRowgridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures three items per row */
+    gap: 10px;
+    padding: 16px;
+    height: 360px;
+    width: 360px;
+  }
+  
+  .SocialMediaMiddleRowgridItem {
+    width:120px;
+    height: 120px;
+  }
+  
+  .SocialMediaMiddleRowgridImage {
+    width:120px;
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .SocialMediaMiddleRowReel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .SocialMediaMiddleRowLeft {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .SocialMediaMiddleRowLeftBottom {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    /* margin-left: 2rem; */
+    gap: 1rem;
+    margin-top: 13rem;
+
+    & img {
+        height: 250px;
+        width: 250px;
+    }
+  }

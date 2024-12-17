@@ -7,17 +7,25 @@ import navIcon3 from "../assets/img/nav-icon3.svg";
 import handWaveVdo from "../assets/Videos/contact-me.gif";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
-import temp from "../assets/img/reachout.gif"
+import temp from "../assets/img/reachout.gif";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   const [isWorkPage, setIsWorkPage] = useState(
-    window.location.pathname.includes("my-work")
+    window.location.pathname.includes("my-work") ||
+      window.location.pathname.includes("skills") ||
+      window.location.pathname.includes("about-us")
   );
 
+  console.log(window.location.pathname);
+
   useEffect(() => {
-    setIsWorkPage(window.location.pathname.includes("my-work"));
+    setIsWorkPage(
+      window.location.pathname.includes("my-work") ||
+        window.location.pathname.includes("skills") ||
+        window.location.pathname.includes("about-us")
+    );
   }, [window.location.pathname]);
 
   useEffect(() => {
@@ -42,6 +50,7 @@ export const NavBar = () => {
   return (
     <Router>
       <Navbar
+        id="project-navbar"
         expand="md"
         className={
           isWorkPage ? "scrolled scrolled--work" : scrolled ? "scrolled" : ""
@@ -69,7 +78,7 @@ export const NavBar = () => {
                 Home
               </Nav.Link>
               <Nav.Link
-                href={isWorkPage ? "/" : "#skills"}
+                href={"/about-us"}
                 className={
                   activeLink === "skills" ? "active navbar-link" : "navbar-link"
                 }

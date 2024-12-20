@@ -11,9 +11,11 @@ import RightImg22 from "../../../assets/work/JewlsByAs/ringForSkills.jpg";
 import LastPhotograph2 from "../../../assets/work/JewlsByAs/Golden_studded_hoops_2Edit.png";
 import { photographyList } from "../Photography";
 import { useNavigate } from "react-router-dom";
+import { isMobileDevice } from "../../WorldIAmSurroundedWith";
 
 const Jewllery = () => {
   const navigate = useNavigate();
+  const isMobile = isMobileDevice();
 
   return (
     <div
@@ -21,7 +23,9 @@ const Jewllery = () => {
         marginTop: "3rem",
       }}
     >
-      <div className="work-page-wrapper">
+      <div
+        className={isMobile ? "work-page-wrapper--mobile" : "work-page-wrapper"}
+      >
         <div
           style={{
             marginTop: "-1.5rem",

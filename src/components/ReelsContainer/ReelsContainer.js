@@ -1,11 +1,12 @@
 import React from "react";
 import "./ReelsContainer.css"; // External CSS for styling
+import { isMobileDevice } from "../WorldIAmSurroundedWith";
 
-
-const ReelsContainer = ({reels}) => {
+const ReelsContainer = ({ reels }) => {
+  const isMobile = isMobileDevice();
 
   return (
-    <div className="reels-container">
+    <div className={isMobile ? "reels-container--mobile" : "reels-container"}>
       {reels.map((reel, index) => (
         <div className="reel-block" key={index}>
           <video

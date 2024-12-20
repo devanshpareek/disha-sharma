@@ -13,6 +13,7 @@ import img52 from "../../../assets/work/Wolf-Fx/5-2.jpg";
 
 import { photographyList } from "../Photography";
 import { useNavigate } from "react-router-dom";
+import { isMobileDevice } from "../../WorldIAmSurroundedWith";
 
 const TshirtPrinting = () => {
   const navigate = useNavigate();
@@ -27,12 +28,18 @@ const TshirtPrinting = () => {
     );
   }, [document.getElementById("project-navbar")]);
 
+  const isMobile = isMobileDevice();
+
   return (
     <div
       style={{
         paddingTop: navHeight,
       }}
-      className="work-page-wrapper tshirt-printing"
+      className={
+        isMobile
+          ? "work-page-wrapper--mobile tshirt-printing-mobile"
+          : "work-page-wrapper tshirt-printing"
+      }
     >
       <div
         style={{

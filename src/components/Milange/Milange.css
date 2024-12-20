@@ -114,3 +114,101 @@
 .melange-work-page-wrapper::-webkit-scrollbar {
   display: none;
 }
+
+.melange-work-page-wrapper--mobile {
+  /* height: 100vh; */
+  width: 100vw;
+  /* max-height: 100vh; */
+  max-width: 100vw;
+  overflow: auto;
+  padding-top: 5%;
+  background-color: white;
+  color: black;  
+  
+  .sukoon-social-media-carousel-images{
+    flex-direction: column;
+  }
+
+  .melange-four-item-grid-carousel {
+    .sukoon-social-media-carousel-images{
+      flex-direction: row;
+      flex-wrap: wrap; /* Wrap images on smaller screens */
+      gap: 0.5rem;
+      justify-content: center; /* Center images */
+    } 
+
+    .sukoon-social-media-carousel-image {
+      width: 45%;
+    }
+  }
+
+  .melange-three-item-grid-carousel {
+    .sukoon-social-media-carousel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .sukoon-social-media-carousel-images {
+      display: grid;
+      grid-template-columns: 1fr; /* Two columns */
+      grid-template-rows: 1fr 1fr; /* Adjust rows automatically */
+      gap: 0.5rem; /* Optional: Add spacing between items */
+      height: 60vh;
+    }
+
+    .first-row {
+      grid-row: 1 / 2; /* Second row */
+      grid-column: 1 / 3; /* Spans both columns */
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two columns for the two images */
+      gap: 0.5rem;
+      height: 23vh;
+      /* max-height: fit-content; */
+      
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  
+
+    .second-row {
+      grid-row: 2 / 2; /* First row */
+      grid-column: 1 / 3; /* Spans both columns */
+      height: 100%;
+      /* max-height: fit-content; */
+      
+      & img {
+        width: 100%;
+        height: 37vh;
+        object-fit: cover;
+      }
+    }
+    
+    
+    
+  }
+
+  .photography {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      /* margin-left: 5vw; */
+      padding-bottom: 2rem;
+
+      .cover-photo-container {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          .cover-photo {
+              height: 20vh;
+              img {
+                  height: 20vh;
+                  object-fit: contain
+              }
+          }
+      }  
+  }
+}

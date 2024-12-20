@@ -25,7 +25,13 @@
   /* Responsive design */
   @media (max-width: 768px) {
     .sukoon-social-media-carousel-container {
-      height: 300px; /* Adjust height for smaller screens */
+      height: fit-content; /* Adjust height for smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .social-media .social-media-image {
+      height: fit-content; /* Full width for smaller screens */
     }
   }
   

@@ -9,9 +9,11 @@ import SecondGroup3 from "../../../assets/work/Sukoon/Lifestyle/SecondGroup3.jpg
 import LastImg from "../../../assets/work/Sukoon/Lifestyle/LastImage.jpg";
 import { photographyList } from "../Photography";
 import { useNavigate } from "react-router-dom";
+import { isMobileDevice } from "../../WorldIAmSurroundedWith";
 
 const Lifestyle = () => {
   const navigate = useNavigate();
+  const isMobile = isMobileDevice();
 
   return (
     <div
@@ -19,7 +21,9 @@ const Lifestyle = () => {
         marginTop: "3rem",
       }}
     >
-      <div className="work-page-wrapper">
+      <div
+        className={isMobile ? "work-page-wrapper--mobile" : "work-page-wrapper"}
+      >
         <div
           style={{
             marginTop: "-1.5rem",
@@ -94,9 +98,11 @@ const Lifestyle = () => {
           </div>
           <div className="cover-photo">
             <img
-              style={{
-                // transform: "rotate(90deg)",
-              }}
+              style={
+                {
+                  // transform: "rotate(90deg)",
+                }
+              }
               src={LastImg}
             ></img>
           </div>

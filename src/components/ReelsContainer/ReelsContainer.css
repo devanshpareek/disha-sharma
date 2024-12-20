@@ -24,3 +24,57 @@
   object-fit: cover; /* Ensures the video fully covers the block */
   background-color: transparent; /* Ensure the video itself has no background */
 }
+
+
+.reels-container--mobile {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-rows: auto auto; /* Two rows: first row for one image, second row for two images */
+  gap: 20px; /* Space between grid items */
+  padding: 20px;
+  height: max-content;
+  margin-bottom: 2rem;
+
+  .reel-block {
+    width: 100%; /* Ensure it fits the grid cell */
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    position: relative; /* For absolute positioning of video */
+    overflow: hidden;
+    background-color: transparent;
+    height: 40vh;
+  }
+  
+  .reel-block video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    object-fit: cover; /* Ensures the video fully covers the block */
+    background-color: transparent;
+  }
+}
+
+/* Media Queries for smaller devices */
+@media screen and (max-width: 768px) {
+  .reels-container--mobile {
+    gap: 15px; /* Reduce gap for smaller screens */
+    
+    .reel-block {
+      padding-top: 75%; /* 4:3 aspect ratio for tablets */
+    }
+  }
+
+  
+}
+
+@media screen and (max-width: 480px) {
+  .reels-container--mobile {
+    gap: 10px;
+    
+    .reel-block {
+      padding-top: 100%; /* Square videos for phones */
+    }
+  }
+}
+

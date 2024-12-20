@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./TbhStore.css";
 import Logo from "../../assets/work/TbhStore/Logo.png";
 import CoverImg from "../../assets/work/TbhStore/Img1.png";
@@ -15,8 +15,10 @@ import RightImg41 from "../../assets/work/TbhStore/Img12.jpg";
 import LeftImg41 from "../../assets/work/TbhStore/Img13.jpg";
 import LastPhotograph from "../../assets/work/TbhStore/Img9.png";
 import WordCloud from "../../assets/work/Sukoon/word-cloud.png";
+import { isMobileDevice } from "../WorldIAmSurroundedWith";
 
 const TbhStore = () => {
+  const isMobile = isMobileDevice();
   const colors = [
     { name: "Red", hex: "#FF0000" },
     { name: "Green", hex: "#00FF00" },
@@ -24,11 +26,29 @@ const TbhStore = () => {
     { name: "Yellow", hex: "#FFFF00" },
     { name: "Purple", hex: "#800080" },
   ];
+
+  const [navHeight, setNavHeight] = useState(
+    document.getElementById("project-navbar")?.getBoundingClientRect().height +
+      25
+  );
+  useEffect(() => {
+    setNavHeight(
+      document.getElementById("project-navbar")?.getBoundingClientRect()
+        .height + 25
+    );
+  }, [document.getElementById("project-navbar")]);
   return (
-    <div className="tbh-work-page-wrapper">
+    <div
+      className={
+        isMobile ? "tbh-work-page-wrapper-mobile" : "tbh-work-page-wrapper"
+      }
+      style={{
+        paddingTop: navHeight,
+      }}
+    >
       <div className="photography">
         <div className="cover-photo">
-          <img src={CoverImg}></img>
+          <img src={LastPhotograph}></img>
         </div>
         <div className="tbh-image-container">
           <div className="image-left">
@@ -61,7 +81,7 @@ const TbhStore = () => {
           <div className="image-left">
             <img src={LeftImg41} alt="Left Image" className="image" />
           </div>
-          <div className="image-right">
+          <div className="image-right image-right--cover">
             <img src={RightImg41} alt="Right Image" className="image" />
           </div>
         </div>
@@ -76,7 +96,7 @@ const TbhStore = () => {
         </div>
 
         <div className="cover-photo">
-          <img src={LastPhotograph}></img>
+          <img src={CoverImg}></img>
         </div>
       </div>
     </div>

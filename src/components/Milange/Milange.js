@@ -23,7 +23,9 @@ import Reel4 from "../../assets/work/Melange/MelangeReels/MilangeReel4.mp4";
 
 import Carousel from "../Sukoon/Carousel/Carousel";
 import ReelsContainer from "../ReelsContainer/ReelsContainer";
+import { isMobileDevice } from "../WorldIAmSurroundedWith";
 const Melange = () => {
+  const isMobile = isMobileDevice();
   const carousel1 = [
     Carousel1Img1,
     Carousel1Img2,
@@ -32,10 +34,16 @@ const Melange = () => {
   ];
   const carousel2 = [Carousel2Img1, Carousel2Img2, Carousel2Img3];
   const months = [July, August, September];
-  const reels = [Reel1,Reel2,Reel3,Reel4];
+  const reels = [Reel1, Reel2, Reel3, Reel4];
 
   return (
-    <div className="melange-work-page-wrapper">
+    <div
+      className={
+        isMobile
+          ? "melange-work-page-wrapper--mobile"
+          : "melange-work-page-wrapper"
+      }
+    >
       <Carousel images={months} />
 
       <div className="photography">
@@ -48,13 +56,14 @@ const Melange = () => {
           </div>
         </div>
       </div>
+      <div className={isMobile ? "melange-four-item-grid-carousel" : ""}>
+        <Carousel images={carousel1} />
+      </div>
+      <div className={isMobile ? "melange-three-item-grid-carousel" : ""}>
+        <Carousel isThreeImageGrid={isMobile} images={carousel2} />
+      </div>
 
-      <Carousel images={carousel1} />
-
-      <Carousel images={carousel2} />
-      
       <ReelsContainer reels={reels} />
-
     </div>
   );
 };

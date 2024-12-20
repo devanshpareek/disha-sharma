@@ -5,9 +5,11 @@ import RightImg1 from "../../../assets/work/Sukoon/Img22.jpg";
 import RightImg2 from "../../../assets/work/Sukoon/Img33.jpg";
 import { photographyList } from "../Photography";
 import { useNavigate } from "react-router-dom";
+import { isMobileDevice } from "../../WorldIAmSurroundedWith";
 
 const Ceremics = () => {
   const navigate = useNavigate();
+  const isMobile = isMobileDevice();
 
   return (
     <div
@@ -15,7 +17,13 @@ const Ceremics = () => {
         marginTop: "3rem",
       }}
     >
-      <div className="sukoon-work-page-wrapper">
+      <div
+        className={
+          isMobile
+            ? "sukoon-work-page-wrapper--mobile"
+            : "sukoon-work-page-wrapper"
+        }
+      >
         <div
           style={{
             marginTop: "-1.5rem",

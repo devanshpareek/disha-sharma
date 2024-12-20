@@ -3,6 +3,7 @@ import JewlsByASWordCloud from "../../assets/work/JewlsByAs/word-cloud.png";
 import SukoonWordCloud from "../../assets/work/Sukoon/word-cloud.png";
 import MelangeWordCloud from "../../assets/work/Melange/word-cloud.png";
 import "./WordCloudContainer.css"; // External CSS for styling
+import { isMobileDevice } from "../WorldIAmSurroundedWith";
 
 const WordCloudContainer = ({ brandName }) => {
   const wordCloudImage =
@@ -37,8 +38,14 @@ const WordCloudContainer = ({ brandName }) => {
           { name: "Purple", hex: "#41584a" },
         ];
 
+  const isMobile = isMobileDevice();
+
   return (
-    <div className="color-pallet-container">
+    <div
+      className={
+        isMobile ? "color-pallet-container-mobile" : "color-pallet-container"
+      }
+    >
       <div className="image-container">
         <img src={wordCloudImage} alt={`${brandName} Word Cloud`} />
       </div>

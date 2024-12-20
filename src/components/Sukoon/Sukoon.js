@@ -18,9 +18,12 @@ import vitaminCCarouselImg1 from "./Vitamin-C-Carousel/img1.png";
 import vitaminCCarouselImg2 from "./Vitamin-C-Carousel/img2.png";
 import vitaminCCarouselImg3 from "./Vitamin-C-Carousel/img3.png";
 import vitaminCCarouselImg4 from "./Vitamin-C-Carousel/img4.png";
+import { isMobileDevice } from "../WorldIAmSurroundedWith";
 
 const Sukoon = () => {
   const reels = [Video1, Video2, Video5, Video3, Video4];
+
+  const isMobile = isMobileDevice();
 
   const vitaminCCarouselImages = [
     vitaminCCarouselImg1,
@@ -30,7 +33,13 @@ const Sukoon = () => {
   ];
 
   return (
-    <div className="sukoon-work-page-wrapper">
+    <div
+      className={
+        isMobile
+          ? "sukoon-work-page-wrapper--mobile"
+          : "sukoon-work-page-wrapper"
+      }
+    >
       <div className="photography">
         <div className="cover-photo">
           <img src={CoverImg}></img>

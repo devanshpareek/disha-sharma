@@ -84,7 +84,7 @@ function App() {
             path: "/my-work/tbh-store",
             element: (
               <>
-                <BrandDescription brandName={"TbhStore"} />
+                {/* <BrandDescription brandName={"TbhStore"} /> */}
                 <TbhStore />
                 {/* <Footer /> */}
               </>

@@ -16,8 +16,10 @@ import Video2 from "./reel2.mp4";
 import Video3 from "./reel3.mp4";
 import Video4 from "./reel4.mp4";
 import ReelsContainer from "../ReelsContainer/ReelsContainer";
+import { isMobileDevice } from "../WorldIAmSurroundedWith";
 
 const JewlsByAs = () => {
+  const isMobile = isMobileDevice();
   const colors = [
     { name: "Red", hex: "#E4D4C8" },
     { name: "Green", hex: "#F7EAD0" },
@@ -29,7 +31,13 @@ const JewlsByAs = () => {
   const reels = [Video2, Video1, Video3, Video4];
 
   return (
-    <div className="work-page-wrapper">
+    <div
+      className={
+        isMobile
+          ? "work-page-wrapper--mobile"
+          : "work-page-wrapper"
+      }
+    >
       <div className="photography">
         <div className="cover-photo">
           <img src={CoverImg}></img>

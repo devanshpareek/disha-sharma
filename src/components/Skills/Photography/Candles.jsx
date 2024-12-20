@@ -9,17 +9,22 @@ import RightImg22 from "../../../assets/work/TbhStore/Img8.png";
 import LastPhotograph from "../../../assets/work/TbhStore/Img9.png";
 import { photographyList } from "../Photography";
 import { useNavigate } from "react-router-dom";
+import { isMobileDevice } from "../../WorldIAmSurroundedWith";
 
 const Candles = () => {
   const navigate = useNavigate();
-
+  const isMobile = isMobileDevice();
   return (
     <div
       style={{
         marginTop: "3rem",
       }}
     >
-      <div className="tbh-work-page-wrapper">
+      <div
+        className={
+          isMobile ? "tbh-work-page-wrapper-mobile" : "tbh-work-page-wrapper"
+        }
+      >
         <div
           style={{
             marginTop: "-1.5rem",

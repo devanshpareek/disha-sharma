@@ -6,6 +6,8 @@ import SocialMedia1 from "../../assets/work/JewlsByAs/SocialMedia/Img1.jpg";
 import SocialMedia2 from "../../assets/work/JewlsByAs/SocialMedia/Img2.jpg";
 import SocialMedia3 from "../../assets/work/JewlsByAs/SocialMedia/Img3.jpg";
 import SocialMedia4 from "../../assets/work/JewlsByAs/SocialMedia/Img4.jpg";
+import { useNavigate } from "react-router-dom";
+import { isMobileDevice } from "../WorldIAmSurroundedWith";
 
 const SocialMedia = () => {
   const [navHeight, setNavHeight] = useState(
@@ -19,22 +21,31 @@ const SocialMedia = () => {
     );
   }, [document.getElementById("project-navbar")]);
 
+  const otherSkills = [
+    { title: "Jewls By AS", link: "/jewls-by-as" },
+    {
+      title: "Sukoon",
+      link: "/sukoon",
+    },
+    {
+      title: "Melange",
+      link: "/melange",
+    },
+  ];
+
+  const isMobile = isMobileDevice();
+
+  const navigate = useNavigate();
+
   return (
-    <div className="social-media-skills-wrapper">
-      <div
-        style={{
-          paddingTop: navHeight,
-        }}
-        className="social-media-skills"
-      >
-        <SocialMediaLeft />
+    <div
+      style={{
+        paddingTop: navHeight,
+      }}
+      className="social-media-skills-wrapper"
+    >
+      <div className="social-media-skills">
         <SocialMediaRight />
-      </div>
-      <div class="social-media">
-        <img src={SocialMedia1} alt="Image 1" class="social-media-image" />
-        <img src={SocialMedia2} alt="Image 2" class="social-media-image" />
-        <img src={SocialMedia3} alt="Image 3" class="social-media-image" />
-        <img src={SocialMedia4} alt="Image 4" class="social-media-image" />
       </div>
     </div>
   );

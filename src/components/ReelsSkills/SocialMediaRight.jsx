@@ -6,9 +6,8 @@ import SocialMediaLastRow from "./SocialMediaLastRow";
 const SocialMediaRight = () => {
   return (
     <div className="social-media-right">
-      <SocialMediaRightFirstRow />
+      {/* <SocialMediaRightFirstRow /> */}
       <SocialMediaMiddleRow />
-      <SocialMediaLastRow />
     </div>
   );
 };

@@ -21,16 +21,17 @@
 }
 
 .image {
-  width: 100%;
-  height: 80%;
+  width: 22vh;
+  height: 22vh;
   object-fit: cover;
   position: absolute; /* Allows smooth transition */
   left: 0;
   top: 20px;
   transition: transform 0.5s ease; /* Smooth sliding effect */
+  border-radius: 8px;
 }
 
 .shift {
-  transform: translateX(50px); 
+  transform: translateX(30px); 
 }
   

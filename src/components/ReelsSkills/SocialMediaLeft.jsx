@@ -19,7 +19,11 @@ const SocialMediaLeft = () => {
           <source src={reel2} type="video/mp4"></source>
         </video>
       </div>
-      <div>
+      <div
+        style={{
+          fontFamily: "Quicksand",
+        }}
+      >
         <h1>Some Text</h1>
       </div>
       <div>

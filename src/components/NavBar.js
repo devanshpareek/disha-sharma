@@ -8,8 +8,10 @@ import handWaveVdo from "../assets/Videos/contact-me.gif";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import temp from "../assets/img/reachout.gif";
+import { isMobileDevice } from "./WorldIAmSurroundedWith";
 
 export const NavBar = () => {
+  const isMobile = isMobileDevice();
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   const [isWorkPage, setIsWorkPage] = useState(
@@ -53,7 +55,13 @@ export const NavBar = () => {
         id="project-navbar"
         expand="md"
         className={
-          isWorkPage ? "scrolled scrolled--work" : scrolled ? "scrolled" : ""
+          isWorkPage
+            ? window.location.pathname.includes("about-us")
+              ? "scrolled"
+              : "scrolled scrolled--work"
+            : scrolled
+            ? "scrolled"
+            : ""
         }
       >
         <Container>
@@ -98,17 +106,6 @@ export const NavBar = () => {
                 My World
               </Nav.Link>
               <Nav.Link
-                href={isWorkPage ? "/" : "#my-work"}
-                className={
-                  activeLink === "my-work"
-                    ? "active navbar-link"
-                    : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("my-work")}
-              >
-                My Work
-              </Nav.Link>
-              <Nav.Link
                 href={isWorkPage ? "/" : "#projects"}
                 className={
                   activeLink === "projects"
@@ -117,26 +114,53 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("projects")}
               >
-                बातें
+                Skills
+              </Nav.Link>
+              <Nav.Link
+                href={isWorkPage ? "/" : "/skills/social-media"}
+                className={
+                  activeLink === "my-work"
+                    ? "active navbar-link"
+                    : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("my-work")}
+              >
+                Projects
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a className="nav-link" href="#">
+                <a
+                  className="nav-link"
+                  href="https://www.linkedin.com/in/disha-sharma-1453791b1/"
+                  target="#blank"
+                >
                   <img src={navIcon1} alt="" />
                 </a>
-                <a className="nav-link" href="#">
-                  <img src={navIcon2} alt="" />
-                </a>
-                <a className="nav-link" href="#">
+                <a
+                  className="nav-link"
+                  href="https://www.instagram.com/dishaa.sharma/"
+                  target="#blank"
+                >
                   <img src={navIcon3} alt="" />
                 </a>
               </div>
             </span>
           </Navbar.Collapse>
-          <div>
-            <img className="hand-wave" src={temp}></img>
-          </div>
+          <Navbar.Brand>
+            <div className="navbar-text-wrapper">
+              <span className="navbar-text">
+                <HashLink to="/#footer">
+                  <button className="vvd">
+                    <span>Let’s Connect</span>
+                  </button>
+                </HashLink>
+              </span>
+            </div>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <span className="navbar-toggler-icon"></span>
+          </Navbar.Toggle>
         </Container>
       </Navbar>
     </Router>

@@ -6,8 +6,11 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import useInView from "../Hooks/useInView";
 import { useEffect, useState } from "react";
-import TshirtDesigningPic from "../assets/work/Wolf-Fx/5-2.jpg"
-import PhotographyImg from "../assets/work/JewlsByAs/img1.jpg"
+import TshirtDesigningPic from "../assets/work/Wolf-Fx/5-2.jpg";
+import PhotographyImg from "../assets/work/JewlsByAs/img1.jpg";
+import BrandStoreCover from "./Skills/BrandStore/Media/cover.png";
+import SocialMediaCover from "./ReelsSkills/Media/Cover.jpg";
+import BaatenCover from "../assets/img/baaten-cover.png";
 
 const Projects = () => {
   const [setRef, isInView] = useInView({
@@ -17,34 +20,38 @@ const Projects = () => {
     {
       title: "Photography",
       description:
-        "A picture is a secret about a secret, the more it tells you the less you know.",
+        "My photos aim to tell a story while keeping things real and honest. For me, simplicity is the key.  I strive to highlight the authenticity of objects rather than making them appear extraordinary.",
       imgUrl: PhotographyImg,
     },
     {
-      title: "Tshirt Designing",
-      description: "Design & Development",
-      imgUrl: TshirtDesigningPic,
-    },
-    {
       title: "Social Media",
-      description: "Design & Development",
-      imgUrl: photographyImg,
+      description:
+        "Social media is my playground. Whether I’m jumping on a trend or coming up with something totally fresh, I always find ways to make things pop. I love creating content that’s fun, meaningful, and true to a brand’s vibe. Reels, posts, stories—you name it, I’m here to make it happen while keeping the brand’s heart at the center.",
+      imgUrl: SocialMediaCover,
     },
     {
       title: "Brand Store",
-      description: "Design & Development",
-      imgUrl: photographyImg,
+      description:
+        "Optimizing brand stores on platforms like Amazon, enhancing the customer’s shopping experience. I’ve worked on designing visually appealing layouts, improving product descriptions to drive engagement and sales.",
+      imgUrl: BrandStoreCover,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: photographyImg,
+      title: "Apparel Designing",
+      description:
+        "Who knew that my love for clothes would turn into actually designing them? Getting to work on activewear has been amazing. It’s like mixing style with function and creating outfits that make you feel ready to take on the world.",
+      imgUrl: TshirtDesigningPic,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: photographyImg,
+      title: "बातें",
+      description:
+        "This segment is where I let my creativity flow without boundaries and try to create a conversation with my art.",
+      imgUrl: BaatenCover,
     },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: photographyImg,
+    // },
   ];
 
   const [onceInView, setOnceInView] = useState(false);
@@ -74,57 +81,6 @@ const Projects = () => {
                     }
                   >
                     <h2>Skills</h2>
-                    {/* <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                      <Nav
-                        variant="pills"
-                        className="nav-pills mb-5 justify-content-center align-items-center"
-                        id="pills-tab"
-                      >
-                        <Nav.Item>
-                          <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                          <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                          <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                        </Nav.Item>
-                      </Nav>
-                      <Tab.Content
-                        id="slideInUp"
-                        className={
-                          isVisible
-                            ? "animate__animated animate__slideInUp"
-                            : ""
-                        }
-                      >
-                        <Tab.Pane eventKey="first">
-                          <Row>
-                            {projects.map((project, index) => {
-                              return <ProjectCard key={index} {...project} />;
-                            })}
-                          </Row>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="second">
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Cumque quam, quod neque provident velit, rem
-                            explicabo excepturi id illo molestiae blanditiis,
-                            eligendi dicta officiis asperiores delectus quasi
-                            inventore debitis quo.
-                          </p>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="third">
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Cumque quam, quod neque provident velit, rem
-                            explicabo excepturi id illo molestiae blanditiis,
-                            eligendi dicta officiis asperiores delectus quasi
-                            inventore debitis quo.
-                          </p>
-                        </Tab.Pane>
-                      </Tab.Content>
-                    </Tab.Container> */}
                     <Row className="skillsContainer">
                       {projects.map((project, index) => {
                         return <ProjectCard key={index} {...project} />;
@@ -137,7 +93,6 @@ const Projects = () => {
           </Row>
         </Container>
       )}
-      {/* <img className="background-image-right" src={colorSharp2}></img> */}
     </section>
   );
 };

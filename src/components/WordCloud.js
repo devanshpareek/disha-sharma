@@ -7,7 +7,7 @@ const options = {
   rotations: 2,
   rotationAngles: [0],
   // fontSizes: [22, 22],
-  fontFamily: "Goudy Old Style",
+  fontFamily: "Quicksand",
   padding: 10,
   deterministic: false,
   // fontFamily: "impact",

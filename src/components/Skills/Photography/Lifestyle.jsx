@@ -22,14 +22,16 @@ const Lifestyle = () => {
       }}
     >
       <div
-        className={isMobile ? "work-page-wrapper--mobile" : "work-page-wrapper"}
+        className={
+          isMobile ? "work-page-wrapper--mobile" : "lifestyle-work-page-wrapper"
+        }
       >
         <div
           style={{
-            marginTop: "-1.5rem",
+            ...(!isMobile && {marginTop: "-1.5rem"}),...(isMobile && {marginTop: "1.5rem"}),
             marginBottom: "1.5rem",
           }}
-          className="photography-list"
+          className={isMobile ? "photography-list--mobile photography-list" : "photography-list"}
         >
           <div
             className={"photography-list-item"}
@@ -45,7 +47,7 @@ const Lifestyle = () => {
                 className={
                   index < photographyList.length - 1
                     ? "photography-list-item"
-                    : ""
+                    : "photography-list-iteem"
                 }
                 onClick={() => {
                   navigate(`/skills/photography/${item.link}`);

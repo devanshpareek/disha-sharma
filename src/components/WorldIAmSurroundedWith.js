@@ -2,12 +2,9 @@ import catPowImg from "../assets/img/cat-paw.png";
 import flowerGirl from "../assets/img/flower-girl.png";
 import illustration2 from "../assets/img/illustration2-img.png";
 import illustration3 from "../assets/img/Illustration3-img.png";
-import illustration4 from "../assets/img/Illustration-4-img.png";
+import illustration4 from "../assets/img/newIllustration.PNG";
 import scrollDown from "../assets/img/scroll-down.png";
 import "react-multi-carousel/lib/styles.css";
-import colorSharp from "../assets/img/color-sharp.png";
-import Carousel from "./Carousel/Carousel";
-import { MoonCloud } from "./MoodCloud";
 import useInView from "../Hooks/useInView";
 import { useEffect, useRef, useState } from "react";
 
@@ -58,7 +55,7 @@ const WorldIAmSurroundedWith = () => {
     "I am Disha, Content creator by profession, dancer by heart, and an Artist by soul.",
     "I like an escape from the world into my room plugging in my favourite music and painting, sketching and sometimes writing.",
     "Sometimes, I wish my eyes were camera. The world is so beautiful I want to capture it all and share the magic I see with everyone. But then I am glad I have my camera.",
-    "Mostly I dream of scaling a mountain, and losing myself in peace of nature, vastness of the sky overhead, and the gentle caress of cool breeze. A moment to simly be me, the world melts away and I find inspiration in the raw beauty around me.",
+    `I believe "Never stop looking for BEAUTY because when you find beauty, you find INSPIRATION." Losing myself in peace of nature, vastness of the sky.  A moment to simply be me, the world melts away.`,
   ];
   return (
     <section ref={setRef} className="skill smooth-scroll-section" id="myWorld">
@@ -69,15 +66,29 @@ const WorldIAmSurroundedWith = () => {
               {index === 0 ? (
                 <div className="my-world-wrapper my-world-wrapper--cover-page">
                   <div className="my-world-text"></div>
-                  <div className="scrolldown-img">
-                    <img src={scrollDown} />
-                  </div>
                 </div>
               ) : index === 1 ? (
                 <div
-                  className={"my-world-wrapper" + " my-world-wrapper--" + index}
+                  className={
+                    isMobile
+                      ? " my-world-wrapper-mobile" +
+                        " my-world-wrapper-mobile--" +
+                        index
+                      : "my-world-wrapper" + " my-world-wrapper--" + index
+                  }
                 >
-                  <div className="my-world-wrapper-container">
+                  <div
+                    style={{
+                      ...(!isMobile && {
+                        marginLeft: "15rem",
+                      }),
+                    }}
+                    className={
+                      isMobile
+                        ? "my-world-wrapper-container-mobile"
+                        : "my-world-wrapper-container"
+                    }
+                  >
                     <div>
                       <img src={slide}></img>
                     </div>
@@ -86,13 +97,11 @@ const WorldIAmSurroundedWith = () => {
                   <div
                     className={isMobile ? "cat-pow cat-pow--mobile" : "cat-pow"}
                   >
-                    <div>
-                      <div className="cat-pow-image">
-                        <img src={catPowImg}></img>
-                      </div>
-                      <div className="cat-pow-text">
-                        oops and also a cat mom for life...!
-                      </div>
+                    <div className="cat-pow-image">
+                      <img src={catPowImg}></img>
+                    </div>
+                    <div className="cat-pow-text">
+                      oops and also a cat mom for life...!
                     </div>
                   </div>
                 </div>
@@ -101,9 +110,8 @@ const WorldIAmSurroundedWith = () => {
                   <div
                     className={
                       isMobile
-                        ? "my-world-wrapper-mobile" +
-                          " my-world-wrapper" +
-                          " my-world-wrapper--" +
+                        ? " my-world-wrapper-mobile" +
+                          " my-world-wrapper-mobile--" +
                           index
                         : "my-world-wrapper" + " my-world-wrapper--" + index
                     }
@@ -113,13 +121,6 @@ const WorldIAmSurroundedWith = () => {
                     </div>
                     <div className="my-world-text">{slidesText[index]}</div>
                   </div>
-                  {index === 4 && (
-                    <div className="scrolldown-img srollup-img">
-                      <div>
-                        <img src={scrollDown} />
-                      </div>
-                    </div>
-                  )}
                 </div>
               )}
             </div>

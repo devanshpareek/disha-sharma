@@ -11,19 +11,20 @@
     .photography {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 2rem;
-        margin-left: 5vw;
+        /* margin-left: 5vw; */
         padding-bottom: 2rem;
 
         .cover-photo {
-            height: 80vh;
-            width: 90vw;
+            max-height: 80vh;
+            max-width: 90vw;
             
 
-            img {
-                height: 80vh;
-                width: 90vw;
-                object-fit: cover
+            & img {
+              max-height: 80vh;
+              max-width: 90vw;
+                object-fit: contain
             }
         }
 
@@ -31,9 +32,11 @@
             display: grid;
             grid-template-columns: 1fr 1fr; /* Two equal columns */
             grid-template-rows: 1fr; /* One row */
-            height: 80vh; /* Total height of 80% of viewport height */
-            width: 90vw; /* Total width of 90% of viewport width */
-            gap: 0.5rem; /* Gap between grid items */
+            max-height: 80vh; /* Total height of 80% of viewport height */
+            max-width: 90vw; /* Total width of 90% of viewport width */
+            width: fit-content;
+            align-items: center;
+            gap: 2rem; /* Gap between grid items */
                   
           .image-left {
             grid-row: 1 / 2;
@@ -41,10 +44,10 @@
             height: 100%;
             max-height: 80vh;
           
-            img {
+            & img {
               height: 100%;
               max-height: 80vh;
-              object-fit: cover; /* Ensure image covers the left container area */
+              object-fit: contain; /* Ensure image covers the left container area */
             }
           }
           
@@ -54,17 +57,14 @@
             height: 100%;
             max-height: 80vh;
           
-            img {
+            & img {
               height: 100%;
               max-height: 80vh;
-              object-fit: cover; /* Ensure image covers the right container area */
+              object-fit: contain; /* Ensure image covers the right container area */
             }
           }
           
-          .image {
-            width: 100%;
-            object-fit: cover; /* Ensures images cover their respective areas */
-          }
+          
         }  
     }
       

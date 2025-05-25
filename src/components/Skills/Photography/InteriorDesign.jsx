@@ -7,10 +7,12 @@ import September from "../../../assets/work/Melange/Months/September.jpg";
 import Carousel from "../../Sukoon/Carousel/Carousel";
 import { photographyList } from "../Photography";
 import { useNavigate } from "react-router-dom";
+import { isMobileDevice } from "../../WorldIAmSurroundedWith";
 
 const InteriorDesign = () => {
   const months = [July, August, September];
   const navigate = useNavigate();
+  const isMobile = isMobileDevice();
 
   return (
     <div
@@ -21,10 +23,14 @@ const InteriorDesign = () => {
       <div className="melange-work-page-wrapper">
         <div
           style={{
-            marginTop: "-1.5rem",
+            ...(!isMobile && { marginTop: "-1.5rem" }),
             marginBottom: "1.5rem",
           }}
-          className="photography-list"
+          className={
+            isMobile
+              ? "photography-list--mobile photography-list"
+              : "photography-list"
+          }
         >
           <div
             className={"photography-list-item"}
@@ -40,7 +46,7 @@ const InteriorDesign = () => {
                 className={
                   index < photographyList.length - 1
                     ? "photography-list-item"
-                    : ""
+                    : "photography-list-iteem"
                 }
                 onClick={() => {
                   navigate(`/skills/photography/${item.link}`);

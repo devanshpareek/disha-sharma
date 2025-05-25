@@ -3,9 +3,10 @@ import MisalignedGrid from "./MisalignedGrid";
 import JewleryImg from "../../assets/work/JewlsByAs/img1.jpg";
 import CeremicsImg from "../../assets/work/Sukoon/Img2.jpg";
 import CandleImg from "../../assets/work/TbhStore/Img2.jpg";
-import LifeStyleImg from "../../assets/work/Sukoon/Lifestyle/FirstGroup2.jpg";
+import LifeStyleImg from "../../assets/work/Sukoon/Lifestyle/SecondGroup1.jpg";
 import "./skills.css";
 import { useNavigate } from "react-router-dom";
+import { isMobileDevice } from "../WorldIAmSurroundedWith";
 
 const images1 = [
   {
@@ -69,31 +70,31 @@ const otherSkills = [
   },
 ];
 const Photography = () => {
+  const isMobile = isMobileDevice();
   const navigate = useNavigate();
-   const [navHeight, setNavHeight] = useState(
-      document.getElementById("project-navbar")?.getBoundingClientRect().height +
-        25
+  const [navHeight, setNavHeight] = useState(
+    document.getElementById("project-navbar")?.getBoundingClientRect().height +
+      25
+  );
+  useEffect(() => {
+    setNavHeight(
+      document.getElementById("project-navbar")?.getBoundingClientRect()
+        .height + 25
     );
-    useEffect(() => {
-      setNavHeight(
-        document.getElementById("project-navbar")?.getBoundingClientRect()
-          .height + 25
-      );
-    }, [document.getElementById("project-navbar")]);
+  }, [document.getElementById("project-navbar")]);
   return (
     <div
       className="skills skills-photography"
       style={{
-        paddingTop:
-          navHeight,
+        paddingTop: navHeight,
       }}
     >
-      <div className="photography-list">
+      {/* <div className="photography-list">
         {otherSkills.map((item, index) => {
           return (
             <div
               className={
-                index < otherSkills.length - 1 ? "photography-list-item" : ""
+                index < otherSkills.length - 1 ? "photography-list-item" : "photography-list-iteem"
               }
               onClick={() => {
                 navigate(`/skills/photography`);
@@ -103,7 +104,7 @@ const Photography = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
 
       {/* <div className="photography-list">
         {photographyList.map((item, index) => {
@@ -123,8 +124,8 @@ const Photography = () => {
           );
         })}
       </div> */}
-      <MisalignedGrid items={images1} />
-      <MisalignedGrid items={images2} />
+      <MisalignedGrid index={1} items={images1} />
+      <MisalignedGrid index={2} items={images2} />
     </div>
   );
 };

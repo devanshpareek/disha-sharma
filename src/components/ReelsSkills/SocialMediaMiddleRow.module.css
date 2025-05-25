@@ -1,26 +1,60 @@
 .SocialMediaMiddleRow {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 8rem;
+    padding: 2rem;
+    max-width: 100%;
+    gap: 8vw;
+    height: 100%;
+    align-items: center;
+}
+
+.SocialMediaMiddleRowMobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    max-width: 100%;
+    gap: 5vh;
+    height: 100%;
+    align-items: center;
 }
 .SocialMediaMiddleRowgridContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Ensures three items per row */
     gap: 10px;
     padding: 16px;
-    height: 360px;
-    width: 360px;
+    height: 70vh;
+    width: 70vw;
+  }
+
+  .SocialMediaMiddleRowgridContainerMobile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures three items per row */
+    gap: 10px;
+    height: 95vw;
+    width: 90vw;
   }
   
   .SocialMediaMiddleRowgridItem {
-    width:120px;
-    height: 120px;
+    width:22vh;
+    height: 22vh;
+  }
+
+  .SocialMediaMiddleRowgridItemMobile {
+    width: 28vw;
+    height: 28vw;
   }
   
   .SocialMediaMiddleRowgridImage {
-    width:120px;
-    height: 120px;
+    width:22vh;
+    height: 22vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .SocialMediaMiddleRowgridImageMobile {
+    width:28vw;
+    height: 28vw;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -38,16 +72,89 @@
     gap: 3rem;
   }
 
-  .SocialMediaMiddleRowLeftBottom {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    /* margin-left: 2rem; */
-    gap: 1rem;
-    margin-top: 13rem;
 
-    & img {
-        height: 250px;
-        width: 250px;
+  .socialMediaFourImagesGridWrapper {
+    .imageGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns of equal width */
+        gap: 16px; /* Space between grid items */
+        width: 95%; /* Adjust grid width */
+        
+        & a {
+          text-decoration: none !important;
+          color: black !important;
+        }
+      }
+      
+      .imageContainer {
+        width: 100%;
+        height: 40vh;
+        width: 25vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.2);
+
+        & h4 {
+          font-family: 'Quicksand';
+          width: 100%;
+          text-align: center;
+          text-decoration: none !important;
+          color: black !important;
+        }
+      }
+      
+      .imageContainer:hover {
+        scale: 1.02;
+      }
+      .imageContainer img {
+        width: 60%;
+        height: 60%;
+        object-fit: contain; /* Ensures the image covers the container */
+      }    
+  }
+
+.socialMediaFourImagesGridWrapperMobile {
+  .imageGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns of equal width */
+    gap: 16px; /* Space between grid items */
+    width: 95%; /* Adjust grid width */
+    
+    & a {
+      text-decoration: none !important;
+      color: black !important;
     }
   }
+  
+  .imageContainer {
+    width: 100%;
+    height: 38vh;
+    width: 44vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.2);
+
+    & h4 {
+      font-family: 'Quicksand';
+      width: 100%;
+      text-align: center;
+      text-decoration: none !important;
+      color: black !important;
+    }
+  }
+  
+  .imageContainer:hover {
+    scale: 1.02;
+  }
+  .imageContainer img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain; /* Ensures the image covers the container */
+  }
+}

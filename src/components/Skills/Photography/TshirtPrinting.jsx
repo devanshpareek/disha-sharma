@@ -10,6 +10,10 @@ import img42 from "../../../assets/work/Wolf-Fx/4-2.jpg";
 import img43 from "../../../assets/work/Wolf-Fx/4-3.jpg";
 import img51 from "../../../assets/work/Wolf-Fx/5.jpg";
 import img52 from "../../../assets/work/Wolf-Fx/5-2.jpg";
+import img61 from "../../../assets/work/Wolf-Fx/6-1.png";
+import img62 from "../../../assets/work/Wolf-Fx/6-2.png";
+import img71 from "../../../assets/work/Wolf-Fx/7-1.png";
+import img72 from "../../../assets/work/Wolf-Fx/7-2.png";
 
 import { photographyList } from "../Photography";
 import { useNavigate } from "react-router-dom";
@@ -41,9 +45,9 @@ const TshirtPrinting = () => {
           : "work-page-wrapper tshirt-printing"
       }
     >
-      <div
+      {/* <div
         style={{
-          marginTop: "-1.5rem",
+          ...(!isMobile && {marginTop: "-1.5rem"}),...(isMobile && {marginTop: "1.5rem"}),
           marginBottom: "1.5rem",
         }}
         className="photography-list"
@@ -59,7 +63,7 @@ const TshirtPrinting = () => {
         >
           Tshirt Designing
         </div>
-      </div>
+      </div> */}
       <div className="photography">
         <div className="cover-photo">
           <img src={img1}></img>
@@ -93,6 +97,30 @@ const TshirtPrinting = () => {
         <div className="two-images-grid-wrapper">
           <div className="imageGrid">
             {[img51, img52].map((src, index) => (
+              <div key={index} className="imageContainer">
+                <img src={src} alt={`Image ${index + 1}`} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="photography">
+        <div className="two-images-grid-wrapper">
+          <div className="imageGrid">
+            {[img61, img62].map((src, index) => (
+              <div key={index} className="imageContainer">
+                <img src={src} alt={`Image ${index + 1}`} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="photography">
+        <div className="two-images-grid-wrapper">
+          <div className="imageGrid">
+            {[img71, img72].map((src, index) => (
               <div key={index} className="imageContainer">
                 <img src={src} alt={`Image ${index + 1}`} />
               </div>

@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import vdo from "../assets/Videos/BannerVideo.mp4";
+import mobileCover from "../assets/img/vangoghmobile.png";
+import { isMobileDevice } from "./WorldIAmSurroundedWith";
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -49,11 +51,17 @@ export const Banner = () => {
     }
   };
 
+  const isMobile = isMobileDevice();
+
   return (
     <section className="banner smooth-scroll-section" id="home">
-      <video autoPlay loop muted className="bg-vdo">
-        <source src={vdo} type="video/mp4"></source>
-      </video>
+      {isMobile ? (
+        <img className="bg-vdo" src={mobileCover}></img>
+      ) : (
+        <video autoPlay loop muted className="bg-vdo">
+          <source src={vdo} type="video/mp4"></source>
+        </video>
+      )}
     </section>
   );
 };

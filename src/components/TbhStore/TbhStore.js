@@ -77,14 +77,14 @@ const TbhStore = () => {
           </div>
         </div>
 
-        <div className="tbh-image-container">
+        {/* <div className="tbh-image-container">
           <div className="image-left">
             <img src={LeftImg41} alt="Left Image" className="image" />
           </div>
           <div className="image-right image-right--cover">
             <img src={RightImg41} alt="Right Image" className="image" />
           </div>
-        </div>
+        </div> */}
 
         <div className="tbh-image-container">
           <div className="image-left">

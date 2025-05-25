@@ -28,10 +28,10 @@ const Jewllery = () => {
       >
         <div
           style={{
-            marginTop: "-1.5rem",
+            ...(!isMobile && {marginTop: "-1.5rem"}),...(isMobile && {marginTop: "1.5rem"}),
             marginBottom: "1.5rem",
           }}
-          className="photography-list"
+          className={isMobile ? "photography-list--mobile photography-list" : "photography-list"}
         >
           <div
             className={"photography-list-item"}
@@ -47,7 +47,7 @@ const Jewllery = () => {
                 className={
                   index < photographyList.length - 1
                     ? "photography-list-item"
-                    : ""
+                    : "photography-list-iteem"
                 }
                 onClick={() => {
                   navigate(`/skills/photography/${item.link}`);

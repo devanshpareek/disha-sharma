@@ -1,5 +1,13 @@
 .brand-store-wrapper {
     background-color: white;
-    height: 100vh;
-    overflow: scroll;
+    /* height: 100vh; */
+    overflow-y: scroll;
+}
+
+.brand-store-sukoon {
+    padding: 2rem;
+}
+
+.brand-store-sukoon-mobile {
+    padding: 1rem;
 }

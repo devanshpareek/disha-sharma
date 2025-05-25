@@ -29,6 +29,8 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Reels from "./components/ReelsSkills/Reels";
 import SocialMedia from "./components/ReelsSkills/SocialMedia";
 import BrandStore from "./components/Skills/BrandStore/BrandStore";
+import ScrollToTop from "./ScrollOnTop";
+import Baaten from "./components/Baaten";
 
 function App() {
   const elementRef = useRef(null);
@@ -58,14 +60,10 @@ function App() {
             element: (
               <>
                 <Banner />
-                {/* <Skills /> */}
                 <WorldIAmSurroundedWith />
-                <WaveCarousel />
                 <Projects />
-
-                {/* <Contact /> */}
-                {/* <Footer /> */}
-                {/* <ComplexWavyLineWithNodes /> */}
+                <WaveCarousel />
+                <Footer />
               </>
             ),
           },
@@ -73,10 +71,11 @@ function App() {
             path: "/my-work/jewls-by-as",
             element: (
               <>
+                <ScrollToTop />
                 <BrandDescription brandName={"JewlsByAs"} />
                 <WordCloudContainer brandName={"JewlsByAs"} />
                 <JewlsByAs />
-                {/* <Footer /> */}
+                <Footer />
               </>
             ),
           },
@@ -85,8 +84,9 @@ function App() {
             element: (
               <>
                 {/* <BrandDescription brandName={"TbhStore"} /> */}
+                <ScrollToTop />
                 <TbhStore />
-                {/* <Footer /> */}
+                <Footer />
               </>
             ),
           },
@@ -95,10 +95,11 @@ function App() {
             path: "/my-work/sukoon",
             element: (
               <>
+                <ScrollToTop />
                 <BrandDescription brandName={"Sukoon"} />
                 <WordCloudContainer brandName={"Sukoon"} />
                 <Sukoon />
-                {/* <Footer /> */}
+                <Footer />
               </>
             ),
           },
@@ -106,10 +107,11 @@ function App() {
             path: "/my-work/melange",
             element: (
               <>
+                <ScrollToTop />
                 <BrandDescription brandName={"Melange"} />
                 <WordCloudContainer brandName={"Melange"} />
                 <Melange />
-                {/* <Footer /> */}
+                <Footer />
               </>
             ),
           },
@@ -117,7 +119,9 @@ function App() {
             path: "/skills/photography",
             element: (
               <>
+                <ScrollToTop />
                 <Photography />
+                <Footer />
               </>
             ),
           },
@@ -125,7 +129,9 @@ function App() {
             path: "/skills/photography/jewllery",
             element: (
               <>
+                <ScrollToTop />
                 <Jewllery />
+                <Footer />
               </>
             ),
           },
@@ -133,7 +139,9 @@ function App() {
             path: "/skills/photography/ceremics",
             element: (
               <>
+                <ScrollToTop />
                 <Ceremics />
+                <Footer />
               </>
             ),
           },
@@ -141,7 +149,9 @@ function App() {
             path: "/skills/photography/candles",
             element: (
               <>
+                <ScrollToTop />
                 <Candles />
+                <Footer />
               </>
             ),
           },
@@ -149,7 +159,9 @@ function App() {
             path: "/skills/photography/lifestyle",
             element: (
               <>
+                <ScrollToTop />
                 <Lifestyle />
+                <Footer />
               </>
             ),
           },
@@ -157,7 +169,9 @@ function App() {
             path: "/skills/social-media",
             element: (
               <>
+                <ScrollToTop />
                 <SocialMedia />
+                <Footer />
               </>
             ),
           },
@@ -165,15 +179,29 @@ function App() {
             path: "/skills/brand-store",
             element: (
               <>
+                <ScrollToTop />
                 <BrandStore />
+                <Footer />
               </>
             ),
           },
           {
-            path: "/skills/tshirt-designing",
+            path: "/skills/apparel-designing",
             element: (
               <>
+                <ScrollToTop />
                 <TshirtPrinting />
+                <Footer />
+              </>
+            ),
+          },
+          {
+            path: "/skills/बातें",
+            element: (
+              <>
+                <ScrollToTop />
+                <Baaten/>
+                <Footer />
               </>
             ),
           },
@@ -181,7 +209,9 @@ function App() {
             path: "/about-us",
             element: (
               <>
+                <ScrollToTop />
                 <AboutUs />
+                <Footer />
               </>
             ),
           },

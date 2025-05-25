@@ -1,9 +1,10 @@
 .skills {
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
     overflow-y: auto;
     /* padding-top: 5%; */
     background-color: white;
+    
 }
 
 .photography-list {
@@ -14,15 +15,28 @@
     /* gap: 1rem; */
 
     & div{
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 2.3vh;
     }
 
     .photography-list-item{
         border-right: 2px solid gray;
+        font-family: 'Quicksand';
     }
+    .photography-list-iteem
+    {
+      font-family: 'Quicksand';
+    }
+
 }
 
+
+.photography-list--mobile {
+  & div{
+    font-size: 1.7vh;
+  }
+}
 
 .tshirt-printing {
 

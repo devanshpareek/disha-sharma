@@ -58,10 +58,15 @@
   /* margin-right: 40%; */
 }
   
+.wave-line-mobile {
+  height: 70% !important;
+}
+
 .slide-text {
   margin-top: 1rem;
   font-size: 1.2rem;
   color: black;
+  font-family: 'Quicksand';
 }
 
 .slide-image {
@@ -69,6 +74,7 @@
   width: 200px;
   object-fit: contain;
   border-radius: 20%;
+
   /* border-radius: 50%; */
 }
 
